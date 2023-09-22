@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pop Up</title>
+</head>
+<body>
+    <div class="btn-container">
+        <button id="btn" onclick="btn1()">OPEN MODAL</button>
+    </div>
+
+    <div class="popup-container" id="popup" onclick="pop()">
+        <div class="popup-content">
+        <h1>Text in a Modal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eius facere dolorum est nam.</p>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function btn1(){
+           let a = document.getElementById("popup").style.display="block"
+            document.querySelector(".popup-content").style.display="block"
+            document.getElementById("popup").style.cssText +="display: flex; align-items: center; justify-content: center;"
+        }
+
+        function pop(){
+            document.getElementById("popup").style.display="none"
+        }
+    </script>
+</body>
+</html>
